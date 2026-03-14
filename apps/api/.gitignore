@@ -1,0 +1,19 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore all logs and tempfiles
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore local DB files
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore uploaded files and local gems
+/storage/*
+/vendor/bundle
+
+# Ignore master key for encrypted credentials
+/config/master.key

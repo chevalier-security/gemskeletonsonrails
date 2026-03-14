@@ -1,0 +1,20 @@
+# Node and workspace
+node_modules/
+
+# Build outputs
+**/dist/
+**/.turbo/
+
+# Rails app artifacts
+apps/api/log/*
+apps/api/tmp/*
+apps/api/storage/*
+apps/api/db/*.sqlite3
+apps/api/db/*.sqlite3-journal
+apps/api/vendor/bundle/
+apps/api/.bundle/
+apps/api/config/master.key
+
+# Editor and OS
+.vscode/
+.DS_Store

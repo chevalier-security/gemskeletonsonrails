@@ -1,0 +1,16 @@
+{
+  "name": "ruby-modular-tools",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @modular/web",
+    "dev:api": "cd apps/api && bundle exec rails s -p 3000",
+    "build:web": "npm run build --workspace @modular/web",
+    "build:packages": "npm run build --workspace @modular/core",
+    "lint:web": "npm run lint --workspace @modular/web"
+  }
+}

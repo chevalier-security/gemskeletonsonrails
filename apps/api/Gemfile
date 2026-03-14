@@ -1,0 +1,40 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '3.2.3'
+
+gem 'rails', '~> 7.2'
+# use sqlite3 as the database for Active Record. more info and instructions on readme.md
+gem 'sqlite3', '~> 1.4'
+
+gem 'puma', '~> 6.0'
+
+gem 'bootsnap', '>= 1.4.4', require: false
+
+# use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'rack-cors'
+
+gem 'devise'
+
+gem 'devise-jwt'
+
+gem 'cancancan'
+
+gem 'rack-attack'
+
+gem 'bcrypt', '~> 3.1.7'
+# bcrypt security concerns don't really apply to our case: we're not using it to hash user passwords, but rather to hash API keys. the security concerns around bcrypt are mostly about the fact that it's a slow hashing algorithm, which is a good thing when hashing passwords (because it makes brute-force attacks more difficult), but can be a problem when hashing large amounts of data or when you need to hash data quickly. in our case, we're only hashing API keys, which are not as sensitive as user passwords, and we don't need to hash them quickly, so the security concerns around bcrypt don't really apply. additionally, we're using a strong cost factor for bcrypt (the default is 12), which makes it even more secure against brute-force attacks.
+# also, the bcrypt security concerns mostly concern the node.js bcrypt package. we're using the gem for ruby. skeleton gems xdxd
+group :development, :test do
+  # call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+end
+
+group :development do
+  gem 'listen', '~> 3.3'
+  # spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+end
+
+# Windows does not include zoneinfo files, so bundle the the tzinfo-data gem. or swap to debian and thank me later
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
