@@ -569,7 +569,10 @@ these need to be set when you deploy the rails api:
 ## fun stuff
 
 so you can check the app.css,, if you do you'll find linear and radial gradients. those linear and radial gradients are what make the background kinda
-look cool on browser. i used to just make websites all day on the indie web so i picked up a trick or two. 
+look cool on browser. i used to just make websites all day on the indie web so i picked up a trick or two. also, wow using rails with typescript/ react is not great. 
+i like javascript, and i like react frameworks a lot now, but i don't like how quickly these things will spiral into 1 million different problems for you. 
+in the future i wouldn't mind doing this again, because i'm very used to it now, but if i have the option i'll use ruby on rails and tailwind instead. 
+you should consider that yourself. ruby on rails + tailwind.
 
 thanks for reading all this stuff if you did.. wowwow!! -sage
 
